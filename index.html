@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Expense Tracker</h2>
+
+<button onclick="toggleMode()">Switch to Advanced Mode</button>
+
+<div id="basicMode">
+    <h3>Total Spending: ₹{{ total_spending }}</h3>
+    <form method="POST" action="/add">
+        <input type="date" name="date" required>
+        <input type="text" name="category" placeholder="Category" required>
+        <input type="number" name="amount" placeholder="Amount" required>
+        <input type="text" name="description" placeholder="Description">
+        <button type="submit">Add Expense</button>
+    </form>
+</div>
+
+<div id="advancedMode" style="display: none;">
+    <h3>Expense Distribution</h3>
+    <canvas id="pieChart"></canvas>
+    <h3>Monthly Spending</h3>
+    <canvas id="barChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+{% endblock %}
