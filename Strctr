@@ -1,0 +1,18 @@
+📁 finance_manager/  
+│-- 📁 static/  
+│   │-- 📁 css/  
+│   │   ├── style.css  
+│   │-- 📁 js/  
+│   │   ├── charts.js  
+│-- 📁 templates/  
+│   │-- base.html  
+│   │-- index.html  
+│   │-- login.html  
+│   │-- register.html  
+│-- 📁 instance/  
+│-- 📁 migrations/  
+│-- app.py  
+│-- models.py  
+│-- config.py  
+│-- requirements.txt  
+│-- README.md  
